@@ -3,10 +3,15 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <View style={styles.container}>
+        <Text>Hello World</Text>
+        <StatusBar style="auto" />
+      </View>
+      <View style={styles.box}>
+
+      </View>
+    </>
   );
 }
 
@@ -17,4 +22,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  box:{
+    flex: 1,
+    backgroundColor:'red'
+  }
 });
