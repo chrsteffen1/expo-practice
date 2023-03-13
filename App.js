@@ -6,10 +6,16 @@ export default function App() {
     <>
       <View style={styles.container}>
         <Text>Hello World</Text>
+        <Text>I made and Italian Flag</Text>
         <StatusBar style="auto" />
       </View>
-      <View style={styles.box}>
-
+      <View style={styles.flag}>
+        <View style={styles.boxOne}>
+        </View>
+        <View style={styles.boxTwo}>
+        </View>
+        <View style={styles.boxThree}>
+        </View>
       </View>
     </>
   );
@@ -22,8 +28,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  box:{
+  flag:{
+    flex:1,
+    flexDirection:'row'
+  },
+  boxOne:{
     flex: 1,
-    backgroundColor:'red'
+    backgroundColor:'green',
+
+  },
+  boxTwo:{
+    flex: 1,
+    backgroundColor:'white',
+  },
+  boxThree:{
+    flex: 1,
+    backgroundColor:'red',
   }
 });
