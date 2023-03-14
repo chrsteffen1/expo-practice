@@ -1,48 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Text, View, ScrollView } from 'react-native';
 
-export default function App() {
-  return (
-    <>
-      <View style={styles.container}>
-        <Text>Hello World</Text>
-        <Text>I made and Italian Flag</Text>
-        <StatusBar style="auto" />
-      </View>
-      <View style={styles.flag}>
-        <View style={styles.boxOne}>
-        </View>
-        <View style={styles.boxTwo}>
-        </View>
-        <View style={styles.boxThree}>
-        </View>
-      </View>
-    </>
-  );
-}
+const App = () => (
+  <View style={{ flex: 1, justifyContent: 'center' }}>
+    <Text style={{ fontSize: 24, textAlign: 'center' }}>
+      Scroll me!
+    </Text>
+    <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
+      {/* This is our scrollable area */}
+      <ScrollView horizontal>        
+        <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
+        <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
+        <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
+      </ScrollView>
+    </View>
+  </View>
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  flag:{
-    flex:1,
-    flexDirection:'row'
-  },
-  boxOne:{
-    flex: 1,
-    backgroundColor:'green',
+export default App;
 
-  },
-  boxTwo:{
-    flex: 1,
-    backgroundColor:'white',
-  },
-  boxThree:{
-    flex: 1,
-    backgroundColor:'red',
-  }
-});
