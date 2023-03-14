@@ -9,7 +9,7 @@ const App = () => {
     <Text style={{ fontSize: 24, textAlign: 'center' }}>
       Scroll me!
     </Text>
-    <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
+    <View style={{ height: 300, backgroundColor: '#e5e5e5', marginTop: 200 }}>
       {/* This is our scrollable area */}
       <ScrollView horizontal>        
         <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
@@ -17,7 +17,8 @@ const App = () => {
         <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
       </ScrollView>
     </View>
-    <Text style={{ margin: 16 }}>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
+      <Text style={{ margin: 16 }}>
         {pressedCount > 0
           ? `The button was pressed ${pressedCount} times!`
           : 'The button isn\'t pressed yet'
@@ -26,7 +27,9 @@ const App = () => {
       <Button
         title='Press me'
         onPress={() => setPressedCount(pressedCount + 1)}
+        disabled={pressedCount >=3}
       />
+    </View>
   </View> 
   )
 };
